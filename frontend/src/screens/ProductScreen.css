@@ -1,0 +1,135 @@
+.productscreen {
+    max-width: 1300px;
+    margin: 1rem auto;
+    display: flex;
+  }
+  
+  .productscreen__left {
+    display: flex;
+    flex: 1.0;
+  }
+  
+  .left__image {
+    margin: 1rem;
+    flex: 0.6;
+  }
+  .left__image>img{
+    border-radius: 20px;
+    box-shadow:2px 4px 10px #3f3d3d;
+
+  }
+
+  .left__info {
+    margin: 1rem;
+    background: #fff;
+    flex: 0.4;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    width: 100%;
+    margin: 1rem ;
+    box-shadow:2px 4px 10px #3f3d3d;
+
+  }
+  
+  .left__name {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
+  .left__info > p,
+  .right__info > p {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .right__info > p {
+    padding: 1rem;
+    border-bottom: 1px solid white;
+  }
+  
+  .left__info > p:last-child,
+  .right__info > p:last-child {
+    border: none;
+  }
+  
+  .productscreen__right {
+    flex: 0.8;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+
+  }
+  
+
+  .right__info {
+    width: 50%;
+    overflow-x: hidden;
+    box-shadow:2px 10px 10px #171717;
+
+    margin: 1rem 25%;
+    background: #171717;
+    color: #f4f4f4;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 15px;
+  }
+  
+  .right__info p {
+    padding: 1rem;
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .right__info p > button {
+    grid-column: 1/-1;
+    width: 100%;
+    padding: 10px 16px;
+    background: #f4f4f4;
+    color: #171717;
+    border: 1px solid #171717;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .right__info p > button:hover{
+    background: #21c7dd;
+    color: #f4f4f4;
+
+  }
+  .right__info select {
+    padding: 10px 16px;
+  }
+  
+  @media (max-width: 960px) {
+    .productscreen {
+      flex-direction: column;
+    }
+  
+    .productscreen__left {
+      flex-direction: column;
+      flex: 1;
+    }
+  
+    .left__image {
+      flex: 1;
+    }
+  
+    .left__info {
+      flex: 1;
+      width: 80%;
+      margin: 1rem 10%;
+  
+    }
+  
+    .productscreen__right {
+      flex: 1;
+      padding: 1rem;
+    }
+  
+    .right__info {
+      width: 100%;
+      margin: 0;
+    }
+  }

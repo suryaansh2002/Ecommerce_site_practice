@@ -1,0 +1,35 @@
+{
+  "name": "new-practice",
+  "version": "1.0.0",
+  "description": "",
+  "proxy": "http://127.0.0.1:5000",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7",
+    "path": "^0.12.7",
+    "razorpay": "^2.0.6",
+    "react-toastify": "^8.0.0",
+    "shortid": "^2.2.16",
+    "stripe": "^8.170.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js --ignore client",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "all": "concurrently \"npm run server\" \"npm run client\" \"nodemone backen/payments/payment.js\"",
+    "payment": "nodemone backen/payments/payment.js",
+    "data:import": "node backend/seederScript.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
