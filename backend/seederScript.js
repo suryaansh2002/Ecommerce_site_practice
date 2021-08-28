@@ -12,11 +12,11 @@ const importData = async () => {
 
     await Product.insertMany(productData);
 
-    console.log("Data Import Success");
+    console.log("Data Imported Successfulyy");
 
     process.exit();
   } catch (error) {
-    console.error("Error with data import", error);
+    console.error("Error:", error);
     process.exit(1);
   }
 };

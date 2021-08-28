@@ -2,11 +2,11 @@ require("dotenv").config();
 const express=require('express');
 const connectDB=require('./config/db');
 const app=express();
-const PORT= process.env.PORT || 5000;
+const PORT= process.env.PORT;
 const productRoutes=require('./routes/productRoutes')
 const cors = require("cors");
 const stripe = require("stripe")("sk_test_51JT68iSGejj8oVuAhj4GEwiRCBpbvSXTMIa7N7f6dyGyyN1TiEFAHLFmCfRonFrOJ8K0wTyxzYxRcIoQcy7rLSPi00ir3L4TIx");
-const uuid = require("uuid/v4");
+const uuid = require("uuid");
 
 
 
@@ -47,7 +47,7 @@ app.post("/checkout", async (req, res) => {
           currency: "USD",
           customer: customer.id,
           receipt_email: token.email,
-          description: `Purchased the ${product.name}`,
+          description: `Order`,
           shipping: {
             name: token.card.name,
             address: {
@@ -76,3 +76,4 @@ app.post("/checkout", async (req, res) => {
   
 
 app.listen(PORT,()=>console.log(`Server running on port ${PORT}`))
+app.listen(PORT,'0.0.0.0');

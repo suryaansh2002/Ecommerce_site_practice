@@ -2,7 +2,7 @@
   "name": "new-practice",
   "version": "1.0.0",
   "description": "",
-  "proxy": "http://127.0.0.1:5000",
+  "proxy": "",
   "main": "server.js",
   "dependencies": {
     "axios": "^0.21.1",
@@ -12,10 +12,10 @@
     "express": "^4.17.1",
     "mongoose": "^5.13.7",
     "path": "^0.12.7",
-    "razorpay": "^2.0.6",
     "react-toastify": "^8.0.0",
     "shortid": "^2.2.16",
-    "stripe": "^8.170.0"
+    "stripe": "^8.170.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "concurrently": "^6.2.1",
