@@ -9,7 +9,7 @@ const products = [
       countInStock: 15,
     },
     {
-      name: "Iphone 12",
+      name: "Iphone 10",
       imageUrl:
         "https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1463&q=80",
       description:
@@ -25,6 +25,27 @@ const products = [
         "The EOS-1D X combines speed with image quality, to create the next generation camera for professionals. Full frame 18 megapixel sensor with Dual “DIGIC 5+” processors sets the standard, and up to 12 frames per second shooting takes it beyond.",
       price: 1300,
       countInStock: 5,
+    },
+    {
+      name:"10000 mAh Powerbank",
+      imageUrl:"https://m.media-amazon.com/images/I/61hZ-Gu2hEL._AC_SL1500_.jpg",
+      description:"Two 10000mAh battery packs not only for portable charging but also around the home. Allowing you charge mobile devices without having to be tethered to a plug socket. Each of them fully charges 2.4 times for iPhone X, 3.6 times for iPhone 8 and 2.2 times for Samsung Galaxy S9.",
+      price:95,
+      countInStock:20,
+    },
+    {
+      name:"Lenovo Ideapad",
+      imageUrl:"https://m.media-amazon.com/images/I/71IVTMa5JQL._AC_SL1500_.jpg",
+      description:'This everyday laptop is powered by an Intel Celeron N4020 processor, 4GB DDR4 RAM, and 64 GB M.2 PCIe SSD storage Enjoy videos or browse online on a 14" HD display panel, framed by narrow bezels',
+      price: 399,
+      countInStock:12,
+    },
+    {
+      name:"Apple Watch Series 3",
+      imageUrl:"https://m.media-amazon.com/images/I/71gsjKxyfjL._AC_SL1500_.jpg",
+      description:"A watch which functions as a Fitness Tracker, Sleep Monitor, GPS, Pedometer, Heart Rate Monitor. Dual-core S3 processor, Optical heart sensor, Size: 38mm x 42mm",
+      price: 79,
+      countInStock:30,
     },
     {
       name: "Amazon Alexa",

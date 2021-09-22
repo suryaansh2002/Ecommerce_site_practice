@@ -11,9 +11,12 @@ import Navbar from "./components/Navbar";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
+import { useHistory } from "react-router-dom";
+import useAlan from "./components/useAlan";
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
+    useAlan()
 
   return (
     <Router>

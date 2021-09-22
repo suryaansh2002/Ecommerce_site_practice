@@ -28,7 +28,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "all": "concurrently \"npm run server\" \"npm run client\" \"nodemone backen/payments/payment.js\"",
     "payment": "nodemone backen/payments/payment.js",
-    "data:import": "node backend/seederScript.js"
+    "data_update": "node backend/seederScript.js"
   },
   "author": "",
   "license": "ISC"
