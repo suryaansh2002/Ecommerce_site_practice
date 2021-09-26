@@ -1,16 +1,13 @@
 import "./CartScreen.css";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 import StripeCheckout from "react-stripe-checkout";
 import CartItem from "../components/CartItem";
 import { addToCart, removeFromCart } from "../redux/actions/cartActions";
 
-
 const CartScreen = () => {
-
-
   const dispatch = useDispatch();
 
   const cart = useSelector((state) => state.cart);
@@ -35,22 +32,18 @@ const CartScreen = () => {
       .toFixed(2);
   };
 
-const product={
-  name:"Order",
-  amount:getCartSubTotal()
-
-}
+  const product = {
+    name: "Order",
+    amount: getCartSubTotal(),
+  };
   async function handleToken(token, addresses) {
-    const response = await axios.post(
-      "http://localhost:5000/checkout",
-      { token, product }
-    );
+    const response = await axios.post("http://localhost:5000/checkout", {
+      token,
+      product,
+    });
     console.log("Response:", response.data);
   }
 
-
-
-  
   return (
     <>
       <div className="cartscreen">
@@ -58,11 +51,8 @@ const product={
           <h2>Your Cart</h2>
 
           {cartItems.length === 0 ? (
-            <div className="back">
-               Cart Is Empty
-            </div>
+            <div className="back">Cart Is Empty</div>
           ) : (
-
             cartItems.map((item) => (
               <CartItem
                 key={item.product}
@@ -73,8 +63,9 @@ const product={
             ))
           )}
           <div className="back">
-          <Link to="/" className="back">Go Back to Home</Link>
-
+            <Link to="/" className="back">
+              Go Back to Home
+            </Link>
           </div>
         </div>
 
@@ -84,16 +75,14 @@ const product={
             <p>${getCartSubTotal()}</p>
           </div>
           <div>
-          <StripeCheckout stripeKey="pk_test_51JT68iSGejj8oVuAOqqtB1iPoj7Mt3DACEPUnQJyq4Hq384qkCHxgUJM1gtDOIZhYl4qX7B3kSDIyxZ5xc2kss1s007nSs9RYX"
-        token={handleToken}
-        amount={product.amount * 100}
-        name="Order"
-        billingAddress
-        shippingAddress
-
-        />
-
-        
+            <StripeCheckout
+              stripeKey="pk_test_51JT68iSGejj8oVuAOqqtB1iPoj7Mt3DACEPUnQJyq4Hq384qkCHxgUJM1gtDOIZhYl4qX7B3kSDIyxZ5xc2kss1s007nSs9RYX"
+              token={handleToken}
+              amount={product.amount * 100}
+              name="Order"
+              billingAddress
+              shippingAddress
+            />
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@ export const getProductDetailsReducer = (state = { product: {} }, action) => {
       return {
         product: {},
       };
-      default: return state
-
+    default:
+      return state;
   }
 };

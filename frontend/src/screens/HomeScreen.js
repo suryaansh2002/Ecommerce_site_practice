@@ -5,13 +5,18 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts as listProducts } from "../redux/actions/productActions";
 
-export default function HomeScreen() {
+import { Helper } from "../Helper";
+export function HomeScreen() {
   const dispatch = useDispatch();
+
   const getProducts = useSelector((state) => state.getProducts);
-  const { products, loading, error } = getProducts;
+  const Productdeets = Helper();
+  let { products, loading, error } = Productdeets;
+
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
+  console.log(products);
   return (
     <div className="homescreen">
       <h2 className="homescreen__title">All Products</h2>
@@ -21,6 +26,7 @@ export default function HomeScreen() {
         ) : error ? (
           <h1>{error}</h1>
         ) : (
+          (console.log(products),
           products.map((product) => (
             <Product
               key={product._id}
@@ -30,7 +36,7 @@ export default function HomeScreen() {
               description={product.description}
               imageUrl={product.imageUrl}
             />
-          ))
+          )))
         )}
       </div>
     </div>
