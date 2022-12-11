@@ -5,7 +5,7 @@ export const getProducts = () => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST });
     const { data } = await axios.get(
-      "https://suryaansh-backend-api.herokuapp.com/api/products"
+      "https://ecommerce-server-5ge8pihqp-suryaansh2002.vercel.app/api/products"
     );
     dispatch({
       type: actionTypes.GET_PRODUCTS_SUCCESS,
@@ -24,7 +24,7 @@ export const getProductDetails = (id) => async (dispatch) => {
     dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_REQUEST });
 
     const { data } = await axios.get(
-      `https://suryaansh-backend-api.herokuapp.com/api/products/${id}`
+      `https://ecommerce-server-5ge8pihqp-suryaansh2002.vercel.app/api/products/${id}`
     );
 
     dispatch({

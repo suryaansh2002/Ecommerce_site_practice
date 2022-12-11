@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
   const { data } = await axios.get(
-    `https://suryaansh-backend-api.herokuapp.com/api/products/${id}`
+    `https://ecommerce-server-5ge8pihqp-suryaansh2002.vercel.app/api/products/${id}`
   );
   dispatch({
     type: actionTypes.ADD_TO_CART,

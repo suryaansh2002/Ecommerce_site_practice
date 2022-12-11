@@ -37,7 +37,7 @@ const CartScreen = () => {
     amount: getCartSubTotal(),
   };
   async function handleToken(token, addresses) {
-    const response = await axios.post("http://localhost:5000/checkout", {
+    const response = await axios.post("https://ecommerce-server-5ge8pihqp-suryaansh2002.vercel.app/checkout", {
       token,
       product,
     });
